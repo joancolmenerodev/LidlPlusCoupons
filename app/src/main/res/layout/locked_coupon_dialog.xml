@@ -1,0 +1,58 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/dialog_locked_width"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/iv_dialog_coupon_locked_image"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/image_dialog_locked_height"
+        android:src="@drawable/ic_lock" />
+
+    <TextView
+        android:id="@+id/tv_dialog_coupon_locked"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_margin_top"
+        android:gravity="center"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        tools:text="A partir del 27/08/20" />
+
+    <TextView
+        android:id="@+id/tv_dialog_coupon_locked_enjoy_coupon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_margin_top"
+        android:gravity="center"
+        android:text="@string/locked_coupon_dialog_enjoy_coupon_text"
+        android:textColor="@color/soft_gray"
+        android:textSize="17sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_margin_top"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/low_separator_height"
+            android:background="@color/line_separator_gray"/>
+
+        <Button
+            android:id="@+id/btn_dialog_coupon_locked"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/understood_dialog_button_text"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</LinearLayout>

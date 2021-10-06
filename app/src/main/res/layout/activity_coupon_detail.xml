@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <com.joancolmenerodev.lidlcoupons.features.detail.utils.CenteredToolbarText
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:buttonGravity="center_vertical"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container_coupon_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:background="@drawable/coupon_item_background_image">
+
+        <ImageView
+            android:id="@+id/coupon_detail_brand_product"
+            android:layout_width="@dimen/coupon_detail_brand_product_width"
+            android:layout_height="@dimen/coupon_detail_brand_product_height"
+            android:layout_marginBottom="@dimen/fab_margin"
+            android:src="@drawable/ic_lock"
+            app:layout_constraintBottom_toTopOf="@+id/container_coupon_info"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_coupon_detail_image"
+            android:layout_width="@dimen/coupon_detail_image_width"
+            android:layout_height="@dimen/coupon_detail_image_height"
+            android:src="@drawable/ic_lock"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.81"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/container_coupon_info"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/container_coupon_bite_info_height"
+            android:background="@drawable/ic_coupon_bite_detail"
+            app:layout_constraintBottom_toTopOf="@+id/scrollView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_coupon_detail_image">
+
+            <TextView
+                android:id="@+id/tv_coupon_discount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:textColor="@color/dark_black"
+                android:textSize="@dimen/coupon_discount_text_size"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_coupon_discount_name"
+                app:layout_constraintEnd_toStartOf="@+id/coupon_detail_divider"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tv_coupon_discount_name"
+                tools:text="-20%" />
+
+
+            <View
+                android:id="@+id/coupon_detail_divider"
+                android:layout_width="@dimen/coupon_detail_divider_width"
+                android:layout_height="@dimen/coupon_detail_divider_height"
+                android:background="@color/dark_gray"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/tv_coupon_discount_name"
+                app:layout_constraintHorizontal_bias="0.54"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.62" />
+
+            <TextView
+                android:id="@+id/tv_coupon_discount_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:maxLines="1"
+                android:textColor="@color/soft_gray"
+                android:textSize="@dimen/coupon_discount_name_text_size"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.90"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Descuento" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:fillViewport="true"
+            app:layout_constraintTop_toBottomOf="@id/container_coupon_info">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/low_padding">
+
+                <TextView
+                    android:id="@+id/tv_coupon_detail_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="@+id/btn_coupon_detail"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/btn_coupon_detail"
+                    tools:text="Desactivado" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_coupon_detail"
+                    android:layout_width="@dimen/button_activation_width"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/button_activation_margin_end"
+                    android:background="@drawable/selector_coupon_activation_background"
+                    android:lines="1"
+                    android:padding="@dimen/low_padding"
+                    android:textColor="@drawable/selector_coupon_activation_text_color"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toEndOf="@+id/tv_coupon_detail_status"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="SELECT" />
+
+
+                <View
+                    android:id="@+id/separator_coupon_status"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/low_separator_height"
+                    android:layout_marginTop="@dimen/default_margin_top"
+                    android:background="@color/dark_gray"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btn_coupon_detail" />
+
+
+                <TextView
+                    android:id="@+id/tv_product_brand_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/default_margin_top"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorPrimary"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/separator_coupon_status"
+                    tools:text="Baresa" />
+
+                <TextView
+                    android:id="@+id/tv_coupon_detail_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/default_margin_top"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_product_brand_name"
+                    tools:text="Aceituna verde" />
+
+                <TextView
+                    android:id="@+id/tv_coupon_detail_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/default_margin_top"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_coupon_detail_name"
+                    tools:text="Rellenas de anchoa" />
+
+                <View
+                    android:id="@+id/separator_coupon_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/low_separator_height"
+                    android:layout_marginTop="@dimen/default_margin_top"
+                    android:background="@color/dark_gray"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_coupon_detail_description" />
+
+                <TextView
+                    android:id="@+id/tv_coupon_days_to_end"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/default_margin_top"
+                    android:drawablePadding="@dimen/default_padding"
+                    app:drawableStartCompat="@drawable/ic_calendar"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/separator_coupon_info"
+                    tools:text="4 días para finalizar" />
+
+                <View
+                    android:id="@+id/separator_coupon_days_to_finish"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/low_separator_height"
+                    android:layout_marginTop="@dimen/default_margin_top"
+                    android:background="@color/dark_gray"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_coupon_days_to_end" />
+
+                <TextView
+                    android:id="@+id/tv_coupon_condition"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/default_margin_top"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/separator_coupon_days_to_finish"
+                    tools:text="Limitado a 8 unidades" />
+
+                <TextView
+                    android:id="@+id/tv_coupon_condition_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/default_margin_top"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_coupon_condition"
+                    tools:text="Cupón canjeable 1 vez" />
+
+                <View
+                    android:id="@+id/separator_coupon_conditions"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/low_separator_height"
+                    android:layout_marginTop="@dimen/default_margin_top"
+                    android:background="@color/dark_gray"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_coupon_condition_description" />
+
+                <TextView
+                    android:id="@+id/coupon_code_product_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/default_margin_top"
+                    android:text="@string/detail_product_code_title"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/separator_coupon_conditions" />
+
+                <TextView
+                    android:id="@+id/tv_coupon_code_product"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/default_margin_top"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/coupon_code_product_title"
+                    tools:text="7099" />
+
+                <View
+                    android:id="@+id/separator_coupon_code_product"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/low_separator_height"
+                    android:layout_marginTop="@dimen/default_margin_top"
+                    android:background="@color/dark_gray"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_coupon_code_product" />
+
+                <TextView
+                    android:id="@+id/tv_detail_availability_and_conditions"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/default_margin_top"
+                    android:text="@string/detail_availability_and_conditions_text"
+                    app:drawableEndCompat="@drawable/ic_arrow_right"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/separator_coupon_code_product" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

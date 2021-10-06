@@ -1,0 +1,49 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <!-- base -->
+    <dimen name="coupon_activated_padding">10dp</dimen>
+    <dimen name="coupon_activated_radius">2dp</dimen>
+
+    <dimen name="low_separator_height">1dp</dimen>
+    <dimen name="low_separator_width">1dp</dimen>
+
+    <dimen name="button_activation_width">100dp</dimen>
+
+    <dimen name="low_padding">8dp</dimen>
+    <dimen name="default_padding">16dp</dimen>
+
+    <dimen name="default_margin_top">10dp</dimen>
+
+    <dimen name="coupon_desactivated_padding">10dp</dimen>
+    <dimen name="coupon_desactivated_radius">1dp</dimen>
+    <dimen name="coupon_desactivated_width">1dp</dimen>
+
+    <dimen name="coupon_item_padding">10dp</dimen>
+    <dimen name="coupon_item_width">1dp</dimen>
+    <dimen name="coupon_item_radius">2dp</dimen>
+
+
+    <!-- coupons list -->
+    <dimen name="coupon_detail_brand_product_width">100dp</dimen>
+    <dimen name="coupon_detail_brand_product_height">100dp</dimen>
+    <dimen name="coupon_detail_brand_product_margin_bottom">50dp</dimen>
+
+    <dimen name="coupon_detail_image_width">150dp</dimen>
+    <dimen name="coupon_detail_image_height">150dp</dimen>
+
+    <dimen name="container_coupon_bite_info_height">100dp</dimen>
+    <dimen name="coupon_discount_text_size">50sp</dimen>
+    <dimen name="coupon_detail_divider_height">40dp</dimen>
+    <dimen name="coupon_detail_divider_width">1dp</dimen>
+
+    <dimen name="coupon_discount_name_text_size">22sp</dimen>
+    <dimen name="button_activation_margin_end">16dp</dimen>
+
+    <!-- coupon detail -->
+
+
+    <!-- dialog locked coupon -->
+    <dimen name="image_dialog_locked_height">150dp</dimen>
+    <dimen name="dialog_locked_width">300dp</dimen>
+</resources>

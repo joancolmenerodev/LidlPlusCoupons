@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="@dimen/coupon_item_padding"
+    android:shape="rectangle">
+    <solid android:color="@color/white" />
+    <stroke
+        android:width="@dimen/coupon_item_width"
+        android:color="@color/gray_coupon_item" />
+    <corners android:radius="@dimen/coupon_item_radius" />
+</shape>

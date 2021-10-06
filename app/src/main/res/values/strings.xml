@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">LidlCoupons</string>
+    <string name="action_scan_code">Scan code</string>
+    <string name="your_coupons">Tus cupones</string>
+    <string name="to_be_implemented_camera">Really you thought I was going to implement this?</string>
+    <string name="coupon_activate_text">ACTIVAR</string>
+    <string name="coupon_activated_text">ACTIVADO</string>
+    <string name="active_coupons_toolbar_text">%d cupones activos</string>
+    <string name="days_to_finish">%s días para finalizar</string>
+    <string name="coupon_finish_today">Finaliza hoy</string>
+    <string name="coupon_unlocks_in">A partir del %s</string>
+    <string name="title_activity_coupon_detail">CouponDetailActivity</string>
+    <string name="understood_dialog_button_text">Entendido</string>
+    <string name="coupon_locked">El cupón se desbloqueará en %s días</string>
+    <string name="coupon_update_unknown_error">An unknown error happened, try it later.</string>
+    <string name="coupon_update_error">We couldn\'t update the selection of that coupon</string>
+    <string name="coupon_detail_not_found">Coupon not found</string>
+    <string name="title_activity_availability_and_conditions">Disponibilidad y condiciones</string>
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="detail_status_activated_coupon_text">Activado</string>
+    <string name="detail_status_desactivated_coupon_text">Desactivado</string>
+    <string name="detail_product_code_title">Código del producto</string>
+    <string name="detail_availability_and_conditions_text">Disponibilidad y condiciones</string>
+    <string name="locked_coupon_dialog_enjoy_coupon_text">¡Podrás disfrutar de tu cupón!</string>
+</resources>
